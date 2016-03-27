@@ -1,0 +1,9 @@
+{
+    "pep8": false,
+    "complete_parameters": true,
+    "complete_all_parameters": true,
+    "python_interpreter": "/usr/bin/python",
+    "extra_paths": "/Library/Python/2.7/site-packages",
+    "anaconda_linting": false,
+    "display_signatures": false
+}

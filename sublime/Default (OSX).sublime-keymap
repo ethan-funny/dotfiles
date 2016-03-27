@@ -1,0 +1,96 @@
+[
+    {"keys": ["enter"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+        [
+            { "key": "following_text", "operator": "regex_contains", "operand": "^[)\\]\\>\\'\\\"\\ %>\\}\\;\\,]", "match_all": true },
+            { "key": "preceding_text", "operator": "not_regex_match", "operand": "^.*\\{$", "match_all": true  }
+        ]
+    },
+    { "keys": ["super+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+    { "keys": ["ctrl+shift+k"], "command": "find_under_expand" },
+    {
+        "button": "button1", "count": 1,
+        "modifiers": ["ctrl"],
+        "press_command": "drag_select",
+        "command": "goto_definition"
+    },
+    {
+        "button": "button2", "count": 1,
+        "modifiers": ["ctrl"],
+        "press_command": "",
+        "command": "jump_back"
+    },
+    { "keys": ["ctrl+y"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Snippet: "}},
+    { "keys": ["ctrl+s"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "set syntax: "}},
+    { "keys": ["ctrl+i"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "MarkdownTOC:Insert TOC"}},
+    { "keys": ["ctrl+u"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "MarkdownTOC:Update TOC"}},
+    { "keys": ["ctrl+p"], "command": "toggle_minimap"},
+    { "keys": ["ctrl+f"], "command": "toggle_side_bar" },
+    { "keys": ["ctrl+v"], "command": "copy_path" },
+
+    { "keys": ["super+left"], "command": "prev_view" },
+    { "keys": ["super+right"], "command": "next_view" },
+    
+
+]
+
+
+
+
+
+
+/*
+1. Enter跳出括号
+reference : https://ruby-china.org/topics/4824
+其实这个 key setting 就是用回车向右移动一格 不过有两个要求
+
+第一个要求是说光标后的内容必须符合 "^[)\\]\\>\\'\\\"]" 这个 regex。 
+基本就是光标后为 ) ] > ' " 的时候。
+注意是用的是following_text 还有 是 regex_contains
+
+第二个要求是说光标前的内容必须不符合 "^.*\\{$" 这个 regex。 
+就是说光标的左边不能是 { 
+这次用的是 preceding_text 和 not_regex_match
+
+所以说其实并没有跳出括号 只是向右移动罢了
+
+2. old
+[
+    {"keys": ["enter"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+        [
+            { "key": "following_text", "operator": "regex_contains", "operand": "^[)\\]\\>\\'\\\"\\ %>\\}\\;\\,]", "match_all": true },
+            { "key": "preceding_text", "operator": "not_regex_match", "operand": "^.*\\{$", "match_all": true  }
+        ]
+    },
+    { "keys": ["j","j"], "command": "exit_insert_mode",
+        "context":
+        [
+            { "key": "setting.command_mode", "operand": false },
+            { "key": "setting.is_widget", "operand": false }
+        ]
+    },
+    { "keys": ["j","j"], "command": "hide_auto_complete", "context":
+        [
+            { "key": "auto_complete_visible", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["j","j"], "command": "vi_cancel_current_action", "context":
+        [
+            { "key": "setting.command_mode" },
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
+            { "key": "vi_has_input_state" }
+        ]
+    }
+]
+
+3. use tab choose completion
+
+{ "keys": ["tab"],
+      "command": "move",
+      "args": {"by": "lines", "forward": true},
+      "context":
+        [
+            { "key": "auto_complete_visible", "operator": "equal", "operand": true }
+        ]
+    }
+
+

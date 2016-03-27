@@ -1,0 +1,7 @@
+{
+    // Clock update interval
+    "StatusBarClock_Interval": 60000,
+
+    // Specifies date / time format
+    "StatusBarTime_format": "%H:%M"
+}

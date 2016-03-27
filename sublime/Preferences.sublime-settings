@@ -1,0 +1,21 @@
+{
+	"always_show_minimap_viewport": true,
+	"auto_complete_cycle": true,
+	"caret_style": "wide",
+	"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
+	"draw_minimap_border": true,
+	"font_size": 15.0,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"BracketHighlighter",
+		"Vintage"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"open_files_in_new_window": false,
+	"tab_completion": false,
+	"tab_size": 4,
+	"tabs_small": true,
+	"theme": "Numix Dark.sublime-theme"
+}

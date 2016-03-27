@@ -1,0 +1,29 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Anaconda",
+		"BracketHighlighter",
+		"Codecs33",
+		"Color Highlighter",
+		"ConvertToUTF8",
+		"DocBlockr",
+		"FileDiffs",
+		"JsFormat",
+		"Markdown Extended",
+		"MarkdownTOC",
+		"Monokai Extended",
+		"Numix Theme",
+		"Package Control",
+		"PackageResourceViewer",
+		"Status Bar Time",
+		"SublimeCodeIntel"
+	],
+	"repositories":
+	[
+		"https://github.com/matkl/Monokai-Black"
+	]
+}
