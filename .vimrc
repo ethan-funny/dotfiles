@@ -142,10 +142,10 @@ endif
 
 " Scripts and Plugins " {{{
 filetype off
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
-Plugin 'gmarik/vundle' " let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle
 
 " plugins util
 "===================== YouCompleteMe ========================
@@ -198,13 +198,14 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
 "au FileType mail let b:delimitMate_autoclose = 0
 
 "===================== statusline =========================
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 set t_Co=256
-"let g:airline_powerline_fonts = 1
-"let g:airline_theme='molokai'
+let g:airline_powerline_fonts = 1
+let g:airline_theme='luna'
 let g:airline_left_sep='>'
-"let g:airline#extensions#tabline#enabled = 1   "开启tabline
-"let g:airline#extensions#tabline#buffer_nr_show = 1  "tab显示编号
+let g:airline#extensions#tabline#enabled = 1   "开启tabline
+let g:airline#extensions#tabline#buffer_nr_show = 1  "tab显示编号
 " 映射切换buffer的键位
 nnoremap [b :bp<CR>
 nnoremap ]b :bn<CR>
@@ -304,7 +305,7 @@ filetype plugin indent on      " Automatically detect file types.
 " " }}}
 
 
-" template " {{{
+" my template " {{{
 " autoload template
 " 设置为0时禁用插件 (template_loader.vim) 
 let g:template_load = 1
@@ -323,27 +324,21 @@ let g:T_DATE_FORMAT = "%Y-%m-%d %H:%M"
 " " }}}
 
 
-" keymapping " {{{
-
+" my keymapping " {{{
 " jump to the end in insert mode
 inoremap <C-e> <C-o>A
-
 " esc映射
 inoremap jj <ESC>
-
 " ctrl-o 映射
 imap kk <C-o>
-
 " Wrapped lines goes down/up to next row, rather than next line in file.
 noremap j gj
 noremap k gk
-
 " 搜索完毕后按一下回车回到normal模式, 再按一下回车高亮就没了
 nnoremap <CR> :nohlsearch<cr>
 " " }}}
 
-
-" utils " {{{
+" my utils " {{{
 " 记住上次打开的位置(remember position last change)
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
