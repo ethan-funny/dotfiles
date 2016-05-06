@@ -20,5 +20,8 @@
 	"tab_completion": false,
 	"tab_size": 4,
 	"tabs_small": true,
-    "material_theme_small_tab": true
+    "material_theme_small_tab": true,
+    "translate_tabs_to_spaces": true,
+    "bold_folder_labels": true,
+    "indent_guide_options": [ "draw_normal", "draw_active"]
 }
