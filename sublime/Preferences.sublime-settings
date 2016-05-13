@@ -4,8 +4,8 @@
 	"caret_style": "wide",
 	// "theme": "Numix Dark.sublime-theme",
 	// "color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
-    "theme": "Material-Theme.sublime-theme",
-    "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+    "theme": "Material-Theme-Darker.sublime-theme",
+    "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"draw_minimap_border": true,
 	"font_size": 15.0,
 	"highlight_line": true,
@@ -23,5 +23,6 @@
     "material_theme_small_tab": true,
     "translate_tabs_to_spaces": true,
     "bold_folder_labels": true,
-    "indent_guide_options": [ "draw_normal", "draw_active"]
+    "indent_guide_options": [ "draw_normal", "draw_active"],
+    "material_theme_contrast_mode": true
 }
