@@ -13,7 +13,7 @@ set shiftround                 " round indent to multiple of 'shiftwidth'
 set tags=.git/tags;$HOME       " consider the repo tags first, then
                                " walk directory tree upto $HOME looking for tags
                                " note `;` sets the stop folder. :h file-search
-
+set colorcolumn=80
 set modeline
 set modelines=5                " default numbers of lines to read for modeline instructions
 
