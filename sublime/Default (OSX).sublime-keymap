@@ -24,7 +24,7 @@
     { "keys": ["ctrl+i"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "MarkdownTOC:Insert TOC"}},
     { "keys": ["ctrl+u"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "MarkdownTOC:Update TOC"}},
     { "keys": ["ctrl+\\"], "command": "toggle_minimap"},
-    { "keys": ["ctrl+f"], "command": "toggle_side_bar" },
+    { "keys": ["ctrl+w"], "command": "toggle_side_bar" },
     { "keys": ["ctrl+v"], "command": "copy_path" },
 
     { "keys": ["super+left"], "command": "prev_view" },
