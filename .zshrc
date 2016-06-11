@@ -106,10 +106,10 @@ alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias .ee='vi ~/.zshrc'
 alias .ss='source ~/.zshrc'
 alias .vv='vi ~/.vimrc'
+alias .tt='vi ~/.tmux.conf'
 alias ll='ls -lrth'
 alias la='ls -a'
 alias cls='clear'
-alias ff='pwd | pbcopy'
 
 
 if brew list | grep coreutils > /dev/null ; then
