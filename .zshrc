@@ -102,14 +102,18 @@ bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
 # useful alias
-alias vi="/Applications/MacVim.app/Contents/MacOS/Vim" 
+alias vi='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias .ee='vi ~/.zshrc'
 alias .ss='source ~/.zshrc'
 alias .vv='vi ~/.vimrc'
 alias .tt='vi ~/.tmux.conf'
-alias ll='ls -lrth'
+alias ll="ls -lrth"
 alias la='ls -a'
 alias cls='clear'
+alias ip='ipython'
+alias r='/usr/local/bin/ranger'
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias gitlog="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 
 if brew list | grep coreutils > /dev/null ; then
