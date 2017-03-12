@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+		<title>{{title}}</title>
+		<link type="text/css" rel="stylesheet" href="asset/css/github-markdown.css">
+		<link type="text/css" rel="stylesheet" href="asset/css/hljs-github.min.css"/>
+
+		<script src="asset/flow-sequence-chart/flowchart.min.js"></script>
+		<script src="asset/flow-sequence-chart/sequence-diagram-min.js"></script>
+		<script src="asset/highlightjs/highlight.pack.js"></script>
+		<link href="asset/highlightjs/styles/github.css"  rel="stylesheet" type="text/css">
+		<script>
+			hljs.initHighlightingOnLoad();
+		</script>
+		<style>
+			body {
+				min-width: 200px;
+				max-width: 790px;
+				margin: 0 auto;
+				padding: 30px;
+			}
+		</style>
+		{{head}}
+	</head>
+	<body>
+		<article class="markdown-body">
+			{{content}}
+		</article>
+	</body>
+</html>
