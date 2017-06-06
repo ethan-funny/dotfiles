@@ -1,0 +1,121 @@
+// Base text
+@font-family: Source Sans Pro;
+@font-size: $USER_FONT_SIZE;
+@text-color: rgb(129, 144, 144);
+@background-color: rgb(252, 244, 220);
+@project-color: rgb(37, 146, 134);
+@done-color: rgba(10, 41, 51, 0.5);
+@link-color: rgb(33, 118, 199);
+@today-color: rgb(189, 54, 19);
+@next-color: rgb(115, 138, 5);
+@waiting-color: rgb(89, 90, 183);
+@line-height-multiple: 1.3; 
+
+// UI
+@tint-color: rgb(33, 118, 199);
+@interface-color: @tint-color;
+@selection-color: mix(@tint-color, @background-color, 30%); // rgb(148, 192, 255);
+@invisibles-color: mix(@tint-color, @background-color, 70%); // rgb(67, 119, 211);  
+
+editor {
+color: @text-color;
+font-size: @font-size;
+font-family: @font-family;
+background-color: @background-color;
+line-height-multiple: @line-height-multiple;    
+
+item-indent: 20px;
+caret-width: 2px;
+caret-color: @tint-color;
+handle-color: @tint-color;
+drop-indicator-color: @tint-color;
+invisibles-color: @invisibles-color;
+selection-background-color: @selection-color;
+guide-line-color: mix(@tint-color, @background-color, 15%);
+message-color: mix(@text-color, @background-color, 50%);
+}   
+
+item[data-type="note"] {
+font-style: italic;
+font-size: @font-size*0.9;
+font-weight: lighter;
+}   
+
+item[data-type="task"] {
+font-style: normal;
+}   
+
+item[data-type="project"] {
+font-weight: bold;
+font-size: @font-size;
+color: @project-color;
+}   
+
+item[depth="1"].item[data-type="project"] {
+font-size: @font-size*1.4;
+}   
+
+item[depth="2"].item[data-type="project"] {
+font-size: @font-size*1.2;
+}   
+
+item[data-done] {
+> run[display] {
+text-strikethrough: NSUnderlineStyleSingle;
+text-strikethrough-color: @done-color;
+color: @done-color;
+}
+}   
+
+run[link] {
+cursor: pointer;
+color: @link-color;
+}   
+
+run[link^="button"] {
+color: @text-color;
+text-expansion: 1;
+}   
+
+run[link^="filter"] {
+color: @text-color;
+}   
+
+run[tag] {
+font-size: @font-size;
+font-style: normal;
+font-weight: normal;
+color: mix(@text-color, @background-color, 50%);
+}   
+
+item[data-today] {
+color: @today-color;
+}   
+
+run[tag=data-today] {
+color: darken(@today-color, 10%);
+}   
+
+item[data-next] {
+color: @next-color;
+}   
+
+run[tag=data-next] {
+color: darken(@next-color, 10%);
+}   
+
+item[data-waiting] {
+color: @waiting-color;
+}   
+
+run[tag=data-waiting] {
+color: darken(@waiting-color, 10%);
+}   
+
+item[data-hold] {
+color: @waiting-color;
+}   
+
+run[tag=data-hold] {
+color: darken(@waiting-color, 10%);
+}
