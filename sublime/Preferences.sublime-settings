@@ -1,11 +1,9 @@
 {
 	"always_show_minimap_viewport": true,
 	"auto_complete_cycle": true,
+	"bold_folder_labels": true,
 	"caret_style": "wide",
-	// "theme": "Numix Dark.sublime-theme",
-	// "color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
-    "theme": "Material-Theme-Darker.sublime-theme",
-    "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+	"color_scheme": "Packages/ayu/ayu-mirage.tmTheme",
 	"draw_minimap_border": true,
 	"font_size": 15.0,
 	"highlight_line": true,
@@ -14,15 +12,20 @@
 		"BracketHighlighter",
 		"Vintage"
 	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
+	"material_theme_contrast_mode": true,
+	"material_theme_small_tab": true,
 	"open_files_in_new_window": false,
 	"tab_completion": false,
 	"tab_size": 4,
 	"tabs_small": true,
-    "material_theme_small_tab": true,
-    "translate_tabs_to_spaces": true,
-    "bold_folder_labels": true,
-    "indent_guide_options": [ "draw_normal", "draw_active"],
-    "material_theme_contrast_mode": true
+	"theme": "ayu-mirage.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"ui_fix_tab_labels": true
 }
